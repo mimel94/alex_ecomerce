@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Motos donde Alex{% endblock%}</title>
+
+    {% block css %}
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+        <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- css nav lateral -->
+
+        <link href="{% static 'css/style_nav_lateral.css' %}" rel="stylesheet">
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+
+</head>
+<body>
+{% block header %}{% include 'base/header.html' %}{% endblock %}
+
+{% block main%} {% endblock %}
+
+{% block footer%}
+{% include 'base/footer.html' %}
+{% endblock %}
+{% block endjs %}
+<!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+
+    <!-- lateral js -->
+    <script type="text/javascript" src="{% static 'js/lateral.js' %}"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+
+
+    <script>
+        new WOW().init();
+
+    </script>
+
+{% endblock %}
+</body>
+</html>
