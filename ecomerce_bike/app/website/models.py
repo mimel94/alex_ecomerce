@@ -28,9 +28,10 @@ class Category(models.Model):
 class Bike(models.Model):
     name = models.CharField(max_length=256, verbose_name='Nombre')
     motor = models.CharField(max_length=256, verbose_name='Motor')
+    description = models.TextField(verbose_name='Descripción')
     cylinder = models.CharField(max_length=266, verbose_name='Cilindraje')
-    photo = models.ImageField(upload_to='media/', default = 'media/None/no-img.png')
-    category = models.ForeignKey(Category)
+    photo = models.ImageField(upload_to='motos/', default = 'None/no-img.png', verbose_name='Foto')
+    category = models.ForeignKey(Category, verbose_name='Categoria')
 
     class Meta:
         verbose_name = 'Moto'
@@ -53,7 +54,8 @@ class Contact(models.Model):
     name = models.CharField(max_length=256, verbose_name='Nombre')
     email = models.EmailField(verbose_name='Correo')
     subjet = models.TextField(verbose_name='Asunto')
-    bike = models.ForeignKey(Bike)
+    celphone = models.CharField(verbose_name='Celular', max_length=256)
+    bike = models.ForeignKey(Bike, verbose_name='Moto')
 
     class Meta:
         verbose_name = 'contacto'

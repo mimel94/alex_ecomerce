@@ -5,14 +5,9 @@
             <h4>Categorias:</h4>
             <br>
             <div class="list-group">
-                <a href="#" class="list-group-item">Scooter y semiautomática</a>
-                <a href="#" class="list-group-item">Sport</a>
-                <a href="#" class="list-group-item">Super Sport</a>
-                <a href="#" class="list-group-item">Todo terreno</a>
-                <a href="#" class="list-group-item">Aventura</a>
-                <a href="#" class="list-group-item">Enduro y motocross</a>
-                <a href="#" class="list-group-item">Cuatrimotos</a>
-                <a href="#" class="list-group-item">Ediciones especiales</a>
+                {% for category in categories %}
+                    <a href="{% url 'views_category' category.id %}" class="list-group-item">{{ category.name }}</a>
+                {% endfor%}
             </div>
         </div>
 

@@ -5,7 +5,7 @@ from django.contrib import admin
 
 # Register your models here.
 class BikeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'motor', 'cylinder', 'photo','category')
+    list_display = ('name', 'motor', 'description', 'cylinder', 'photo','category')
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
