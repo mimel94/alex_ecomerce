@@ -35,7 +35,7 @@
                             <p class="card-text">
                                 {{ last_bike.description|truncatechars:50  }}
                             </p>
-                            <a href="#" class="btn btn-default">Pide mas información</a>
+                            <a href="{% url 'contact' last_bike.id %}" class="btn btn-default">Pide mas información</a>
                         </div>
 
                     </div>
