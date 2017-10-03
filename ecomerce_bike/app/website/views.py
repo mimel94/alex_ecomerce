@@ -62,3 +62,8 @@ class ContactCreateView(CreateView):
         print form.errors
         return render(self.request, self.template_name, context)
 
+class ContactUs(TemplateView):
+    template_name = 'website/contactUs.html'
+
+class WhereWeAre(TemplateView):
+    template_name = 'website/whereweare.html'

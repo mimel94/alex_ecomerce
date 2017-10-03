@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block title%}Alex motos{% endblock %}
+{% block js %}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+{% block main %}
+<main>
+
+<!--Main layout-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!--Second row-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="widget-wrapper wow fadeIn" data-wow-delay="0.4s">
+                        <h4>Encuentranos :</h4>
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                <p><strong>¿Donde estamos?</strong></p>
+                                <p>Dale a como llegar desde el mapa y listo. </p>
+                                <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.5590180520558!2d-75.30068588574198!3d2.94220449785711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b74f407574aff%3A0x962a48fd2f9423d7!2sUniversidad+Surcolombiana+Campus+Central!5e0!3m2!1ses!2sco!4v1506991206511" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!--/.Main layout-->
+
+    </main>
+{% endblock%}

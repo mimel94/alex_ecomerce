@@ -25,7 +25,7 @@
                     <div class="card wow fadeIn" data-wow-delay="0.2s">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="{{ bike.photo.url }}" alt="Card image cap">
+                        <img class="img-fluid" src="{{ bike.photo.url }}" data-toggle="modal" data-target="#{{bike.id}}" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
@@ -37,6 +37,26 @@
                             </p>
                             <a href="{% url 'contact' bike.pk %}" class="btn btn-default">Pide mas información</a>
                         </div>
+                        <!-- Modal -->
+                            <div id="{{bike.id}}" class="modal fade" role="dialog">
+                              <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">{{ bike.name }}</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p> {{ bike.description }}</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div><!-- endModal -->
 
                     </div>
                     <!--/.Card-->
